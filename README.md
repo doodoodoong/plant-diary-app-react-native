@@ -1,50 +1,82 @@
-# Welcome to your Expo app 👋
+# 🌱 Plant Diary App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+식물 관리와 성장 기록을 위한 React Native 모바일 애플리케이션입니다.
 
-## Get started
+## 📱 주요 기능
 
-1. Install dependencies
+- 식물 등록 및 관리
+- 성장 기록 및 사진 저장
+- 물주기, 비료주기 알림
+- 식물 관리 캘린더
+- 성장 통계 및 분석
 
-   ```bash
-   npm install
-   ```
+## 🛠 기술 스택
 
-2. Start the app
+- **Framework**: React Native with Expo
+- **Router**: Expo Router (file-based routing)
+- **Language**: TypeScript
+- **Styling**: StyleSheet
+- **State Management**: React Hooks
 
-   ```bash
-   npx expo start
-   ```
+## 🚀 시작하기
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+### 1. 의존성 설치
 
 ```bash
-npm run reset-project
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2. 개발 서버 실행
 
-## Learn more
+```bash
+npm start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+### 3. 앱 실행
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+개발 서버 실행 후 다음 옵션 중 선택:
 
-## Join the community
+- **iOS 시뮬레이터**: `i` 키 입력 또는 `npm run ios`
+- **Android 에뮬레이터**: `a` 키 입력 또는 `npm run android`
+- **웹 브라우저**: `w` 키 입력 또는 `npm run web`
+- **Expo Go**: QR 코드 스캔 (실제 디바이스)
 
-Join our community of developers creating universal apps.
+## 📁 프로젝트 구조
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```
+PlantDiaryApp/
+├── app/                    # 메인 앱 디렉토리 (file-based routing)
+│   ├── index.tsx          # 홈 화면
+│   └── _layout.tsx        # 루트 레이아웃
+├── assets/                # 이미지, 폰트 등 정적 파일
+├── components/            # 재사용 가능한 컴포넌트
+├── hooks/                 # 커스텀 훅
+├── constants/             # 상수 정의
+└── app.json              # Expo 설정 파일
+```
+
+## 🔧 개발 스크립트
+
+```bash
+npm start          # 개발 서버 시작
+npm run android    # Android 앱 실행
+npm run ios        # iOS 앱 실행
+npm run web        # 웹 버전 실행
+npm run lint       # 코드 린팅
+```
+
+## 📦 빌드 설정
+
+### iOS
+- Bundle Identifier: `com.plantdiary.app`
+- iOS 최소 버전: 13.0 이상
+
+### Android
+- Package Name: `com.plantdiary.app`
+- 필요 권한: `INTERNET`
+
+## 🔗 유용한 링크
+
+- [Expo 문서](https://docs.expo.dev/)
+- [React Native 문서](https://reactnative.dev/)
+- [Expo Router 문서](https://docs.expo.dev/router/introduction/)
