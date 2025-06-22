@@ -22,8 +22,15 @@
       "infoPlist": {
         "NSAppTransportSecurity": {
           "NSAllowsArbitraryLoads": true
-        }
-      }
+        },
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "plugins": [
+        "expo-dev-client",
+        "expo-router",
+        "expo-dev-client",
+        "expo-router"
+      ]
     },
     "android": {
       "package": "com.plantdiary.app",
@@ -60,7 +67,7 @@
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "f9131cbc-3a1d-4172-8bb6-d55f538cc284"
+        "projectId": "19840a81-b798-49fe-a2e5-d1e67557785f"
       }
     }
   }
