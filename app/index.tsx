@@ -1,3 +1,4 @@
+import * as Speech from "expo-speech";
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { StyleSheet } from "react-native";
@@ -19,6 +20,13 @@ export default function HomeScreen() {
           allowsInlineMediaPlayback={true}
           mixedContentMode="compatibility"
           allowsFullscreenVideo={true}
+          onMessage={(event) => {
+            const msg = event.nativeEvent.data;
+            if (msg.startsWith("tts:")) {
+              const text = msg.replace("tts:", "");
+              Speech.speak(text);
+            }
+          }}
         />
       </SafeAreaView>
     </SafeAreaProvider>
